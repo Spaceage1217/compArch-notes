@@ -1,0 +1,19 @@
+
+1
+  A) p1 = 3ghz /1.5 = 2 10^9 IPS
+     p2 = 2.5ghz /1 = 2.5 * 10^9 IPS
+     p3 = 4ghz /2.2 = 1.82 * 10^9 IPS
+     p2 has the highest performance based on its IPS.
+
+  B) 1.
+       p1 cycle = 3ghz  * 10 * 10^10 = 30^10
+       p2 cycle = 2.5ghz  * 10 * 10^10  = 25^10
+       p3 cycle = 4ghz  * 10 * 10^10  = 40^10
+     2. p1 num of instructions = (3ghz  * 10 * 10^10) / 1.5  = 20^10
+        p2 num of instructions = (2.5ghz  * 10 * 10^10) / 1  = 25^10
+        p3 num of instructions = (4ghz  * 10 * 10^10) / 2.2  = 18.2^10
+
+     3. 1.2ghz  * 0.7 - 1.71 so
+        p1 new clock rate = 3ghz  * 1.71 = 5.13ghz
+        p2 new clock rate = 2.5ghz  * 1.71 = 4.27ghz
+        p3 new clock rate = 4ghz  * 1.71 = 6.84ghz
