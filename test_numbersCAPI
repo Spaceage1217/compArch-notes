@@ -1,0 +1,69 @@
+
+
+
+
+Knapsack (Optimization O0)
+
+real    0m7.578s
+user    0m7.372s
+sys     0m0.204s
+
+real    0m7.606s
+user    0m7.388s
+sys     0m0.204s
+
+real    0m7.610s
+user    0m7.396s
+sys     0m0.192s
+
+real    0m7.611s
+user    0m7.416s
+sys     0m0.176s
+
+real    0m7.581s
+user    0m7.404s
+sys     0m0.176s
+===============
+Knapsack (Optimization O3)
+
+real    0m1.048s
+user    0m0.872s
+sys     0m0.172s
+
+real    0m1.056s
+user    0m0.880s
+sys     0m0.172s
+
+real    0m1.047s
+user    0m0.904s
+sys     0m0.140s
+
+real    0m1.044s
+user    0m0.868s
+sys     0m0.172s
+
+real    0m1.045s
+user    0m0.872s
+sys     0m0.172s
+===============
+Core Count
+160
+
+CPU Frequency
+clock           : 3690.000000MHz
+
+Current users
+r_b324   pts/0        2018-02-07 20:37 (147.26.231.156)
+sag196   pts/1        2018-02-07 19:29 (147.26.231.156)
+p_h74    pts/3        2018-02-07 19:59 (147.26.231.156)
+o_e16    pts/4        2018-02-07 18:53 (147.26.231.156)
+dvf5     pts/5        2018-02-07 20:34 (10.216.136.214)
+jmp257   pts/8        2018-02-07 20:03 (147.26.231.153)
+pth14    pts/14       2018-02-07 18:14 (147.26.231.156)
+p_h74    pts/15       2018-02-07 18:28 (147.26.231.156)
+
+Current load averages
+ 20:38:35 up 71 days,  9:02,  8 users,  load average: 0.53, 0.16, 0.05
+
+Linux version / OS version / GCC version
+Linux version 4.4.0-97-generic (buildd@bos01-ppc64el-013) (gcc version 5.4.0 20160609 (Ubuntu/IBM 5.4.0-6ubuntu1~16.04.4) ) #120-Ubuntu SMP Tue Sep 19 17:26:02 UTC 2017
