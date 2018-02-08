@@ -13,7 +13,89 @@
         p2 num of instructions = (2.5ghz  * 10 * 10^10) / 1  = 25^10
         p3 num of instructions = (4ghz  * 10 * 10^10) / 2.2  = 18.2^10
 
-     3. 1.2ghz  * 0.7 - 1.71 so
+  C)    1.2ghz  * 0.7 - 1.71 so
         p1 new clock rate = 3ghz  * 1.71 = 5.13ghz
-        p2 new clock rate = 2.5ghz  * 1.71 = 4.27ghz
-        p3 new clock rate = 4ghz  * 1.71 = 6.84ghz
+2)  1/(2.5 * 10^9) = 400ps;
+       1/(3 * 10^9) = 333ps;
+
+      p1 = ((0.1*400ps)+(0.2*2*400ps)+(0.5*3*400ps)+(0.2*4*400ps))*10^6 = 1.12 milliseconds
+      p2 = ((0.1*333ps)+(0.2*2*333ps)+(0.5*3*333ps)+(0.2*4*333ps))*10^6 = 932.4 microseconds
+
+      P2 implementation is faster
+
+     A & B) p1 total clock cycles = ((0.1*1)+(0.2*2)+(0.5*3)+(0.2*3))*10^6 = 2600000/10^6 = 2.6 CPI
+        p2 total clock cycles = ((0.1*2)+(0.2*2)+(0.5*2)+(0.2*2))*10^6 = 2000000/10^6 = 2.0 CPI
+
+        Both have a CPI of 2 so global CPI is 2
+
+3)
+    A)
+       A CPI = 1.1 / (1.0*10^9 × 1.0*10^-9) = 1.1
+       B CPI = 1.5 / (1.2*10^9 × 1.0*10^-9) = 1.25
+
+    B)
+        ((1.2*10^9)*1.25)/((1.0*10^9) * 1.1) = 1.3636
+        clock A 73 times faster
+
+    C)
+        (1.0*10^9 × 1.1) / (6.0*10^8 × 1.1) = 1.67
+        (1.2*10^9 × 1.1) / (6.0*10^8 × 1.1) = 2.27
+
+4)
+  Exp 1
+    for x86
+     real mean = (7.800s + 7.560s + 7.980s + 7.788s)/4 = 7.78200 seconds
+     user mean  = (6.459s + 6.298s + 6.162s + 6.520s)/4 = 6.35975 seconds
+     sys mean =   (1.997s + 1.502s + 1.397s + 1.459s)/4 = 1.58875 seconds
+
+
+     x86 has 4 cores
+     clock : 2393.998MHz
+
+    for Power8
+      real mean = (7.578s + 7.606s + 7.610s + 7.611s)/4 = 7.60125 seconds
+      user mean  = (7.372s + 7.388s + 7.396s + 7.416s)/4 = 7.39300 seconds
+      sys mean =   (0.204s + 0.204s + 0.192s + 0.176s)/4 = 0.194 seconds
+
+      capi has 160 cores
+      clock : 3690.000000MHz
+
+      The mean execution times from power8 is much faster which makes sense based on the amount
+      of cores it has. The clock cycle is also faster.
+
+  Exp 2
+    for x86
+      real mean = (2.620s + 2.825s  + 2.842s + 2.871s)/4 = 2.7895 seconds
+      user mean = (1.304s + 1.382s + 1.355s + 1.407s)/4 = 1.36200 seconds
+      sys mean =  (1.315s + 1.443s + 1.487s + 1.464s )/4 = 1.42725 seconds
+
+    for power8
+     real mean =  (1.048s + 1.056s + 1.047s + 1.044s)/4 = 1.04875 seconds
+     user mean  = (0.872s + 0.880s + 0.904s + 0.868s)/4 = 0.881 seconds
+     sys mean =   (0.172s + 0.172s + 0.140s + 0.172s)/4 = 0.164 seconds
+
+     The execution time for both x86 and power8 is faster when the optimization level is at 3.
+     The power8 Architecture still surpasses the x86 for execution times.
+
+
+
+
+  Exp 3
+    | Hostname | Architecture | Processor Speed | Operating system | GCC version                                        | # users logged in |
+    ----------------------------------------------------------------------------------------------------------------------------------------|
+    | EROS     | x86          | 2393.998MHz     | Nehalem-C        | gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-16)        | 8                 |
+    | capi     | Power8       | 3690.000000MHz  | ppc64le          | (Ubuntu/IBM 5.4.0-6ubuntu1~16.04.5) 5.4.0 20160609 | 8                 |
+
+
+   Clock rate = 2061Mghz
+   # of cycles 27,954,967,600
+
+
+   The mean execution times from power8 is much faster which makes sense based on the amount
+   of cores it has. The clock cycle is also faster. This lends itself to axiom 1 discussed in class. upping the optimization level
+   to 3 also increases the speed. The real average speed for x86 before and after the level 3
+   are 7.78200 seconds before vs 2.7895 seconds after. Across the board power8 outperforms the x86
+   in terms of execution times. The calculated CPU execution time is very close to the execution time
+   for the x86 Architecture. Both were around 7s. The execution time would be (# of cycles/clock rate)
+
+   Using the power8 clock rate we get ( 27,954,967,600/3690.000000 * 10^9) = 7.575872 seconds vs 7.60125 using the time execution.
