@@ -1,0 +1,69 @@
+Homework 1 2/19/2018
+
+
+2.18
+  1)
+    if we have 128 registers then
+    log2(128) = 7,
+    so now instead of
+    6|5|5|5|5|6 ------>32 bits
+    for the opcode,rs,rt,rd,shamt,funct we get
+    6|7|7|7|5|6 ---> 38 bits.
+
+    The rs,rt, and rd increase by 2 bits each.
+
+  2)
+    for I-type instructions the usual format is
+    6|5|5|16  ------>32 bits
+    for the opcode rs, rt and intermediate.
+    but would now be
+    6|7|7|16 -----> 36 bits
+
+
+  3)
+    The shift from 32 to 128 will create longer instruction encoding causing
+     the program to take longer to do the same operations as it would with 32
+     registers. It maybe also harder to align subsequent instructions in the PC.
+     A plus side to more registers however means less instructions going into
+     memory reducing the amount of lw and sw instructions which will decrease the
+     size of the code and program overall.
+
+
+
+2.25
+  1)
+      This statement would require a loop which is used implemented
+      by jumping to address offsets in the PC and a conditional which is implemented
+      in instructions like beq, bgt, blt etc.... It would seem that the most
+      appropriate instruction format is a type I instruction.
+  2)
+      The equivalent MIPS instruction would be
+
+      **for simplicity sake Ill assume that R[rs] is stored in $s1 **
+
+      Loop : slt $t0 $zero $s1
+             beq  $t0 $zero Break
+             addi $s1 $s1  -1
+             j Loop
+      Break:
+
+
+2.47
+  1)
+      .70 * 2 = 1.4
+      .10 * 6 = .6
+      .20 * 3 = .6
+      1.4 + .6 + .6 = 2.6
+
+  2)
+      25% improvement on 2.6 cpi is 1.95 cpi
+      if load or store and branch dont change then
+      1.95 = (.70 * x ) + .6 + .6,
+      .75 = .70 * x,
+      .75/.70 = x,
+      x = 1.07
+
+  3)
+      505 improvement on 2.6 cpi is 1.3
+      (1.3 - 1.2)/.70 = x,
+      x = .143
