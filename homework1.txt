@@ -1,7 +1,7 @@
 Homework 1 2/19/2018
 
 
-2.18
+1-2.18
   1)
     if we have 128 registers then
     log2(128) = 7,
@@ -30,7 +30,7 @@ Homework 1 2/19/2018
 
 
 
-2.25
+2-2.25
   1)
       This statement would require a loop which is used implemented
       by jumping to address offsets in the PC and a conditional which is implemented
@@ -48,7 +48,7 @@ Homework 1 2/19/2018
       Break:
 
 
-2.47
+3-2.47
   1)
       .70 * 2 = 1.4
       .10 * 6 = .6
@@ -67,3 +67,12 @@ Homework 1 2/19/2018
       505 improvement on 2.6 cpi is 1.3
       (1.3 - 1.2)/.70 = x,
       x = .143
+
+
+
+
+4
+  (a)
+      addMult $s0 $s1 $s2
+
+5    
