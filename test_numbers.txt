@@ -1,0 +1,62 @@
+user    0m6.459s
+sys     0m1.997s
+
+real    0m7.800s
+user    0m6.298s
+sys     0m1.502s
+
+real    0m7.560s
+user    0m6.162s
+sys     0m1.397s
+
+real    0m7.980s
+user    0m6.520s
+sys     0m1.459s
+
+real    0m7.788s
+user    0m6.284s
+sys     0m1.502s
+===============
+Knapsack (Optimization O3)
+
+real    0m2.620s
+user    0m1.304s
+sys     0m1.315s
+
+real    0m2.825s
+user    0m1.382s
+sys     0m1.443s
+
+real    0m2.842s
+user    0m1.355s
+sys     0m1.487s
+
+real    0m2.871s
+user    0m1.407s
+sys     0m1.464s
+
+real    0m2.710s
+user    0m1.356s
+sys     0m1.354s
+===============
+Core Count
+4
+
+CPU Frequency
+cpu MHz         : 2393.998
+
+Current users
+jmp257   pts/0        2018-02-07 16:23 (cpe-173-174-47-20.austin.res.rr.com)
+ash109   pts/1        2018-02-07 17:52 (cs-213995.cs.txstate.edu)
+zz11     pts/2        2018-02-06 12:08 (comal301c00.cs.txstate.edu)
+ccl60    pts/3        2018-02-07 18:14 (10.219.140.14)
+dvf5     pts/4        2018-02-07 18:21 (10.216.136.214)
+dvf5     pts/5        2018-02-07 18:43 (cs-205775.cs.txstate.edu)
+wp01     pts/6        2018-02-07 18:41 (itsct-203405.rrhec.txstate.edu)
+mjl67    pts/7        2018-02-07 18:46 (10.216.212.253)
+
+Current load averages
+ 18:47:43 up 12 days, 10:56,  8 users,  load average: 0.49, 0.22, 0.16
+
+Linux version / OS version / GCC version
+Linux version 3.10.0-693.17.1.el7.x86_64 (mockbuild@x86-041.build.eng.bos.redhat.com) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-16) (GCC) ) #1 SMP Sun Jan 14 10:36:03 EST 2018
